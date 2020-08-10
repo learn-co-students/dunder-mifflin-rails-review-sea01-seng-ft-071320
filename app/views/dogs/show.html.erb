@@ -1,0 +1,14 @@
+<h1> <%= @dog.name.capitalize %> </h1>
+
+<h2> Breed: <%= @dog.breed %> </h2>
+<h2> Age: <%= @dog.age %> </h2><br>
+
+Employees:
+<ul>
+<% @dog.employees.each do |em| %>
+<li> <%=link_to "#{em.first_name} #{em.last_name}", em %> </li>
+<% end %>
+</ul>
+
+<%= link_to "All Employees", employees_path%>
+<%= link_to "All Dogs", dogs_path%>
